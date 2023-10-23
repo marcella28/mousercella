@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body17">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.imagens{
+    height: 300px;
+    width: 900px;
+    padding: 30px;
+    position: relative;
+    left: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap ;
+    gap: 80px;
+}
+
+.img{
+    height: 200px;
+    border-radius: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>Imagens animadas também podem ser clicáveis. Encontre a imagem abaixo que pode ser clicada e clique nela para ir para a próxima tela.<strong>“mão”</strong> quando o cursor se move sobre a imagem.</p>
+
+
+    <div class="imagens">
+        <picture> <img class="img" src="images/c1.jpg"></picture>
+        <picture> <img class="img" src="images/c2.jpg"></picture>
+        <picture> <img  style="cursor: pointer;"  class="img" src="images/c3.jpg" class="cat" onclick="location = '18.html'"></picture>
+        <picture> <img class="img" src="images/c4.jpg"></picture>
+        <picture> <img class="img" src="images/c5.jpg"></picture>
+        <picture> <img class="img" src="images/c6.jpg"></picture>
+    </div>
+
+    
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador17")) {
+            localStorage.setItem("contador17", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body17 = document.getElementById("body17");
+        body17.addEventListener('click', function() {
+            let contador17 = parseInt(localStorage.getItem("contador17"));
+            contador17 += 1;
+            localStorage.setItem("contador17", contador17.toString());
+        });
+    </script>
+</body>
+</html>

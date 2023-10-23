@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body31">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+input{
+    height: 19px;
+    width: 19px;
+}
+.hmov{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 300px;
+        margin-left: 100px;
+}
+
+#imgn1, #imgn2, #imgn3, #imgn4, #imgn5{
+    display: none;
+    position: absolute;
+    height: 600px;
+    width: 500px;
+    border-style: outset;
+    border-width: 5px;
+    border-color: #c402ff;
+}
+
+#btmovie{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+    </style>
+
+<script>
+    var selectedOption = null; // Para rastrear a opção selecionada atualmente
+
+    var selectedOptions = [];
+
+        function filmecheck2(filme) {
+            if (!selectedOptions.includes(filme)) {
+                selectedOptions.push(filme);
+            }
+            if (selectedOptions.length === 5) {
+                document.getElementById("btmovie").style.display = "block";
+            }
+        }
+
+    function filmecheck(filme) {
+        if (selectedOption !== null) {
+            document.getElementById(selectedOption).style.display = "none"; // Oculta a imagem anterior
+        }
+        selectedOption = filme;
+        document.getElementById(filme).style.display = "block";
+    }
+
+    function mov1() {
+
+        filmecheck("imgn1");
+        filmecheck2("mov1");
+    }
+
+    function mov2() {
+        filmecheck("imgn2");
+        filmecheck2("mov2");
+    }
+
+    function mov3() {
+        filmecheck("imgn3");
+        filmecheck2("mov3");
+    }
+
+    function mov4() {
+        filmecheck("imgn4");
+        filmecheck2("mov4");
+    }
+
+    function mov5() {
+        filmecheck("imgn5");
+        filmecheck2("mov5");
+    }
+
+    </script>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>Clique em cada um dos <em>filmes de halloween</em> dos botões de opção abaixo e clique no botão ‘Continuar’.</p>
+    <br>
+    <br>
+    <div class="hmov">
+        <div style="width: 400px;">
+            <input type="radio" name="filme" onclick="mov1() " id="mov1"><strong>"O Estranho Mundo de Jack" (The Nightmare Before Christmas)</strong> - Um clássico animado dirigido por Tim Burton que combina elementos de Halloween e Natal.<br><br>
+            <input type="radio" name="filme" onclick="mov2()" id="mov2"><strong>"Halloween" (1978)</strong> - O filme original de John Carpenter que introduziu Michael Myers como um ícone do horror.<br><br>
+            <input type="radio" name="filme" onclick="mov3()" id="mov3"><strong>"Os Fantasmas se Divertem" (Beetlejuice)</strong> - Uma comédia de terror excêntrica dirigida por Tim Burton.<br><br>
+            <input type="radio" name="filme" onclick="mov4()" id="mov4"><strong>"O Iluminado" (The Shining)</strong> - Uma adaptação do romance de Stephen King, dirigida por Stanley Kubrick, que se passa em um hotel isolado no inverno.<br><br>
+            <input type="radio" name="filme" onclick="mov5()" id="mov5"><strong>"Abracadabra (Hocus Pocus)</strong> - Um filme de clássico de Halloween.<br><br>
+        </div>
+        <div>
+        <picture><img  src="images/1.jpg" id="imgn1"></picture>
+        <picture><img  src="images/2.jpg" id="imgn2"></picture>
+        <picture><img  src="images/3.jpg" id="imgn3"></picture>
+        <picture><img  src="images/4.jpg" id="imgn4"></picture>
+        <picture><img  src="images/5.jpg" id="imgn5"></picture>
+        </div>
+    </div>
+    <button id="btmovie" onclick="location='32.html'" style="display: none;">Continuar</button>
+
+    
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador31")) {
+            localStorage.setItem("contador31", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body31 = document.getElementById("body31");
+        body31.addEventListener('click', function() {
+            let contador31 = parseInt(localStorage.getItem("contador31"));
+            contador31 += 1;
+            localStorage.setItem("contador31", contador31.toString());
+        });
+    </script>
+
+    </body>
+</html>

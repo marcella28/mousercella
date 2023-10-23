@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body19">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19</title>
+    <style>
+     *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+} 
+
+table{
+    padding: 20px;
+}
+
+.btclick{
+    height: 80px;
+    width: 80px;
+    border-radius: 200px;
+}
+
+.btopen{
+    height: 80px;
+    width: 80px;
+    border-radius: 200px;
+}
+#tree1, #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8{
+    display: none;
+}
+
+#btcontinue{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <script>
+var totalbt = 7;
+var btck = 0;
+
+function verify() {
+  if (btck === totalbt) {
+    document.getElementById("btcontinue").style.display = "block";
+  }
+}
+
+function exibir(id) {
+  var elemento = document.getElementById(id);
+
+  if (elemento.style.display !== "block") {
+    elemento.style.display = "block";
+    btck++;
+    verify();
+  }
+}
+
+    </script>
+
+
+
+
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>Boaa! Agora vamos ver tipos diferentes de botões.  Clique em cada uma das imagens para avançar para a próxima página:</p>
+    <br>
+    <table width="80%">
+        <tbody>
+            <tr class="bts">
+               <td><picture><img  class="btclick" src="images/jack.jpeg" onclick="exibir('tree1')"></picture></td> 
+               <td><picture><img  class="btclick" src="images/jack.jpeg" onclick="exibir('tree2')"></picture></td> 
+               <td><picture><img  class="btclick" src="images/jack.jpeg" onclick="exibir('tree3')"></picture></td> 
+               <td><picture><img  class="btclick" src="images/jack.jpeg" onclick="exibir('tree4')"></picture></td> 
+               <td><picture><img  class="btclick" src="images/jack.jpeg" onclick="exibir('tree5')"></picture></td> 
+               <td><picture><img  class="btclick" src="images/jack.jpeg" onclick="exibir('tree6')"></picture></td> 
+               <td><picture><img  class="btclick" src="images/jack.jpeg" onclick="exibir('tree7')"></picture></td> 
+            </tr>
+
+            <tr>
+                <td><picture><img  id="tree1" class="btopen" src="images/jackwife.jpeg"></picture></td> 
+                <td><picture><img  id="tree2" class="btopen" src="images/jackwife.jpeg"></picture></td>
+                <td><picture><img  id="tree3" class="btopen" src="images/jackwife.jpeg"></picture></td>
+                <td><picture><img  id="tree4" class="btopen" src="images/jackwife.jpeg"></picture></td>
+                <td><picture><img  id="tree5" class="btopen" src="images/jackwife.jpeg"></picture></td>
+                <td><picture><img  id="tree6" class="btopen" src="images/jackwife.jpeg"></picture></td>
+                <td><picture><img  id="tree7" class="btopen" src="images/jackwife.jpeg"></picture></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div><button id="btcontinue" onclick="location = '20.html'" style="cursor: pointer;">Continue</button></div></div>
+
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador19")) {
+            localStorage.setItem("contador19", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body19 = document.getElementById("body19");
+        body19.addEventListener('click', function() {
+            let contador19 = parseInt(localStorage.getItem("contador19"));
+            contador19 += 1;
+            localStorage.setItem("contador19", contador19.toString());
+        });
+    </script>
+    </body>
+    </html>
+

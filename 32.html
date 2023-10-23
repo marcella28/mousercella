@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body32">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+#btday{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+
+
+    </style>
+
+<script>
+    function exbutton(){
+    if (document.getElementById("days").value == "sexta")
+            document.getElementById("btday").style.display = "block";
+        else document.getElementById("btday").style.display = "none";
+}
+</script>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>A pequena caixa branca abaixo é uma caixa de lista suspensa. Clique na seta triangular preta à direita para abrir a lista de opções e, a seguir, clique na opção desejada.</p>
+    <p>Selecione o dia "Sexta-Feira 13", na caixa de listagem suspensa e clique no botão 'Continuar'.</p>
+    <br>
+    <div>
+        <label for="days">Escolha um dia da semana:</label>
+
+<select name="days" id="days" onclick="exbutton()">
+  <option value="dom">Domingo, 8</option>
+  <option value="segunda">Segunda-Feira, 9</option>
+  <option value="terca">Terça-Feira, 10</option>
+  <option value="quarta">Quarta-Feira, 11</option>
+  <option value="quinta">Quinta-Feira, 12</option>
+  <option value="sexta">Sexta-Feira, 13</option>
+  <option value="sabado">Sábado, 14</option>
+</select>
+    </div>
+    <br>
+    <br>
+    <button id="btday" onclick="location='33.html'" style="display: none;">Continuar</button>
+    <div style="display: flex; justify-content: end; padding-right: 100px; ">
+        <img   style="height: 500px;" src="images/friday.jpg" >
+
+        
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador32")) {
+            localStorage.setItem("contador32", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body32 = document.getElementById("body32");
+        body32.addEventListener('click', function() {
+            let contador32 = parseInt(localStorage.getItem("contador32"));
+            contador32 += 1;
+            localStorage.setItem("contador32", contador32.toString());
+        });
+    </script>
+
+</body>
+</html>

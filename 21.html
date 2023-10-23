@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body21">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21</title>
+    <style>
+       *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+} 
+
+#btcontinue3{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+    cursor: pointer;
+    display: none;
+}
+
+#boo1, #boo2, #boo3, #boo4, #boo5, #boo6{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.boo{
+    position: relative;
+    left: 40%;
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows:  150px 150px 150px;
+    padding: 30px;
+}
+    </style>
+</head>
+<body>
+    <script>
+var tghost = 0
+var ghost = 6
+
+    function vghost(){
+    if(tghost===ghost) {
+        document.getElementById("btcontinue3").style.display = "block";  
+        }
+ }
+
+ var imgclick ={}
+function altimg(id){
+    const newimg = "images/g2.png"
+    var imagem = document.getElementById(id);
+    if (imagem.src !== newimg && !imgclick[id]){
+    imgclick[id] = true;
+    imagem.src = newimg;
+    tghost ++;
+    vghost();
+}
+}
+
+    </script>
+
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p> Clique <strong>duas vezes</strong> em cada um dos <em>fantasminhas</em> abaixo para ativá-los e prossiga para a próxima página.</p>
+    <br>
+
+    <div class="boo">
+        <picture><img  id="boo1" src="images/g1.png" ondblclick="altimg('boo1')"></picture>
+        <picture><img  id="boo2" src="images/g1.png" ondblclick="altimg('boo2')"></picture>
+        <picture><img  id="boo3" src="images/g1.png" ondblclick="altimg('boo3')"></picture>
+        <picture><img  id="boo4" src="images/g1.png" ondblclick="altimg('boo4')"></picture>
+        <picture><img  id="boo5" src="images/g1.png" ondblclick="altimg('boo5')"></picture>
+        <picture><img  id="boo6" src="images/g1.png" ondblclick="altimg('boo6')"></picture>
+    </div>
+
+    <button  id="btcontinue3" onclick="location = '22.html'">Continue</button>
+
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador21")) {
+            localStorage.setItem("contador21", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body21 = document.getElementById("body21");
+        body21.addEventListener('click', function() {
+            let contador21 = parseInt(localStorage.getItem("contador21"));
+            contador21 += 1;
+            localStorage.setItem("contador21", contador21.toString());
+        });
+    </script>
+</body>
+</html>

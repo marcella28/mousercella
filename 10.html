@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body10">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.numbers8{
+    position: relative;
+    display: grid;
+    grid-template-columns: 12px 12px 12px 12px;
+    grid-template-rows:  15px 15px 15px ;
+    color: rgb(199, 23, 67);
+    
+}
+
+.red{
+    color: rgb(236, 42, 42);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#oito{
+    cursor: pointer;
+    color: rgb(236, 42, 42);
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+
+    <p class="oito">Ótimo!!! Agora clique no numero 8 (esse tá mais complicadinho ein!)</p>
+
+    <div style="display: flex; justify-content: center; padding: 20px;">
+    <div class="numbers8">
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span  class="red" id="oito" onclick="location = '11.html'">8</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        <span class="red" onclick="location = '9.html'">9</span>
+        </div>
+    </div>
+
+        <div style="display: flex; justify-content: center;">
+            <img  src="images/bruxa.gif" >
+        </div>
+    
+   
+        <script>
+            // Inicializa o contador se ele não existir no localStorage
+            if (!localStorage.getItem("contador10")) {
+                localStorage.setItem("contador10", "0");
+            }
+            // Adicione um evento de clique ao body1
+            const body10 = document.getElementById("body10");
+            body10.addEventListener('click', function() {
+                let contador10 = parseInt(localStorage.getItem("contador10"));
+                contador10 += 1;
+                localStorage.setItem("contador10", contador10.toString());
+            });
+        </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body16">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 8px;
+    font-size: 20px;
+}
+#bt3{
+    height: 50px;
+    width: 70px;
+    border-style:dashed;
+    border-width: 3px;
+    border-color:blueviolet;
+    background-color:rgb(248, 170, 2) ;
+    font-size: 20px;
+    position: relative;
+    left: 45%;  
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    
+    <div style="display: flex; flex-direction: row;">
+        <p class="pbt">Na verdade, eles podem aparecer de muitas maneiras diferentes. Clique no botão abaixo para continuar.</p>
+        <img style="height: 280px;" src="images/ab.gif" >
+    </div>
+    <div>
+        <button id="bt3" onclick="location = '17.html'">Olá!</button>
+    </div>
+
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador16")) {
+            localStorage.setItem("contador16", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body16 = document.getElementById("body16");
+        body16.addEventListener('click', function() {
+            let contador16 = parseInt(localStorage.getItem("contador16"));
+            contador16 += 1;
+            localStorage.setItem("contador16", contador16.toString());
+        });
+    </script>
+</body>
+</html>

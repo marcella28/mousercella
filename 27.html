@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body27">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mg {
+            height: 70px;
+            width: auto;
+            padding: 10px;
+            border-style: solid;
+            border-width: 5px;
+            background-color: rgb(255, 154, 0);
+            border-color: rgb(247, 95, 28);
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 35px;
+            position: relative;
+            left: 20px;
+        }
+
+        body {
+            background-color: bisque;
+        }
+
+        h3 {
+            padding: 20px;
+        }
+
+        p {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        #vampcasa {
+            display: flex;
+            position: absolute;
+            top: 250px;
+            left: 750px;
+            width: 400px;
+            height: 400px;
+            background-image: url("images/vampcasa.jpeg");
+            background-size: 100% 100%;
+            z-index: 1;
+        }
+
+        #vamp {
+            background-image: url("images/vamp.jpeg");
+            background-size: 100% 100%;
+            position: absolute;
+            z-index: 2;
+            width: 190px; /* Defina o tamanho do vampirinho */
+            height: 150px;
+            left: 0; /* Posição inicial do vampirinho */
+            top: 300px;
+            cursor: grab;
+        }
+
+        .mostrar {
+            height: 40px;
+            width: 120px;
+            border-radius: 5px;
+            border-style: double;
+            border-width: 5px;
+            border-color: chartreuse;
+            background-color: #a202ff;
+            color: azure;
+            position: absolute;
+            top: 500px;
+            left: 10px;
+            display: none; /* Inicialmente, o botão está oculto */
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            Dragable(document.getElementById("vamp"));
+        };
+
+        function addEvent(el, type, callback) {
+            if (el.addEventListener) {
+                el.addEventListener(type, callback);
+            } else if (el.attachEvent) {
+                el.attachEvent("on" + type, callback);
+            }
+        }
+
+        function Dragable(el) {
+            var isMove = false,
+                x = 0, y = 0,
+                xel = 0, yel = 0;
+
+            addEvent(el, "mousedown", function (e) {
+                isMove = true;
+                x = window.event ? window.event.clientX : e.pageX;
+                y = window.event ? window.event.clientY : e.pageY;
+                xel = x - el.offsetLeft;
+                yel = y - el.offsetTop;
+            });
+
+            addEvent(document, "mousemove", function (e) {
+                if (isMove) {
+                    e.preventDefault();
+                    x = window.event ? window.event.clientX : e.pageX;
+                    y = window.event ? window.event.clientY : e.pageY;
+                    el.style.left = (x - xel) + 'px';
+                    el.style.top = (y - yel) + 'px';
+
+                    // Verifique se o vampirinho está dentro da área delimitada (vampcasa)
+                    var vampcasa = document.getElementById('vampcasa');
+                    if (isInside(el, vampcasa)) {
+                        document.getElementsByClassName('mostrar')[0].style.display = 'block';
+                    } else {
+                        document.getElementsByClassName('mostrar')[0].style.display = 'none';
+                    }
+                }
+            });
+
+            addEvent(document, "mouseup", function () {
+                isMove = false;
+            });
+        }
+
+        function isInside(element, container) {
+            var rectElement = element.getBoundingClientRect();
+            var rectContainer = container.getBoundingClientRect();
+
+            return (
+                rectElement.left >= rectContainer.left &&
+                rectElement.right <= rectContainer.right &&
+                rectElement.top >= rectContainer.top &&
+                rectElement.bottom <= rectContainer.bottom
+            );
+        }
+    </script>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>“Clicar e arrastar” é uma forma de mover determinados objetos na tela. Para mover um objeto, coloque o cursor do mouse sobre ele, pressione e segure o botão esquerdo do mouse e mova o mouse. Depois de "arrastar" o objeto para o local desejado, solte o botão do mouse.</p>
+    <p>Clique e arraste o vampirinho, e leve-o até o castelo!</p>
+    <br>
+   <div>
+        <div id="vamp" draggable="true"></div>
+        <div id="vampcasa"></div>
+</div>
+    <div><button class="mostrar" onclick="location = '28.html'" style="display: none"><strong>Próximo</strong></button></div>
+
+    
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador27")) {
+            localStorage.setItem("contador27", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body27 = document.getElementById("body27");
+        body27.addEventListener('click', function() {
+            let contador27 = parseInt(localStorage.getItem("contador27"));
+            contador27 += 1;
+            localStorage.setItem("contador27", contador27.toString());
+        });
+    </script>
+</body>
+</html>

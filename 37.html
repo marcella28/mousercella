@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body37">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+input{
+    border-color: greenyellow;
+    border-width: 3px;
+    width: 250px;
+}
+
+.text {
+
+text-align: center;
+
+}
+
+
+.container {
+
+display: flex;
+
+justify-content: space-between;
+
+
+
+}
+
+.respostas {
+
+width: 45%;
+border-style: solid;
+border-width: 5px;
+border-color: rgb(10, 10, 10);
+background-color: rgb(238, 186, 238);
+
+}
+
+.perguntas{
+    height: 800px;
+    width: 45%;
+border-style: solid;
+border-width: 5px;
+border-color: rgb(10, 10, 10);
+background-color: rgb(238, 186, 238);
+}
+
+
+.respostas h3, .perguntas h3 {
+
+text-align: center;
+
+color: rgb(13, 12, 14);
+
+
+}
+
+.respostas p, .perguntas p {
+
+margin: 0;
+
+}
+
+#final, #proximoPagina{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+
+img{
+    height: 120px;
+    width: 120px;
+    display: none;
+}
+    </style>
+
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+<div style="display: flex; justify-content: center;">
+<p id="valores" style="font-size: 40px; color:orangered"><strong></strong></p>
+</div>
+
+<div>
+    <p>Pratique suas habilidades de <strong>copiar e colar</strong> copiando as respostas na coluna da <em>esquerda</em> e colando -as ao lado das perguntas corretas à <em>direita</em>.</p>
+
+    <p>Para copiar o texto, destaque-o com o mouse, mantenha pressionada a tecla <strong>Ctrl</strong> do teclado e toque rapidamente na <strong>tecla C</strong> . Para colar , clique dentro da caixa de texto onde deseja colar a resposta, mantenha pressionada a tecla Ctrl e toque rapidamente na tecla V.</p>
+        
+    <p>Você deve responder todas as perguntas corretamente antes de continuar.</p>
+</div>
+
+<div class="container">
+
+    <div class="respostas">
+        <h3>Respostas:</h3>
+        <p>A. 31 de Outubro</p>
+        <hr>
+        <p>B. trick-or-treating (doces ou travessuras)</p>
+        <hr>
+        <p>C. Laranja</p>
+        <hr>
+        <p>D. Morcego</p>
+    </div>
+
+    <div class="perguntas">
+        <h3>Perguntas</h3>
+        <p>Qual é a cor das abóboras do Halloween?</p> <!-- Laranja -->
+        <div style="display: flex; flex-direction: row;">
+            <p> <input type="text" id="1resposta" placeholder="Cole a resposta aqui"></p>
+            <img src="images/yes-removebg-preview.png" id="resposta1-yes">
+            <img src="images/no.png" id="resposta1-no">
+        </div>
+        <hr>
+        <p>Qual animal é frequentemente associado ao Halloween?</p> <!-- Morcego -->
+        <div style="display: flex; flex-direction: row;">
+            <p> <input type="text" id="2resposta" placeholder="Cole a resposta aqui"></p>
+            <img src="images/yes-removebg-preview.png" id="resposta2-yes">
+            <img src="images/no.png" id="resposta2-no">
+        </div>
+        <hr>
+        <p>Quando é celebrado o Halloween?</p> <!-- 31 de Outubro -->
+        <div style="display: flex; flex-direction: row;">
+            <p> <input type="text" id="3resposta" placeholder="Cole a resposta aqui"></p>
+            <img src="images/yes-removebg-preview.png" id="resposta3-yes">
+            <img src="images/no.png" id="resposta3-no">
+        </div>
+        <hr>
+        <p>Qual é a tradição mais comum durante o Halloween?</p> <!-- "trick-or-treating" (doces ou travessuras) -->
+        <div style="display: flex; flex-direction: row;">
+            <p> <input type="text" id="4resposta" placeholder="Cole a resposta aqui"></p>
+            <img src="images/yes-removebg-preview.png" id="resposta4-yes">
+            <img src="images/no.png" id="resposta4-no">
+        </div>
+    </div>
+</div>
+<br>
+<div style="display: flex; justify-content: center; flex-direction: row;">
+    <button id="final" onclick="verificarRespostas()" style="display: block;">Enviar</button>
+    <button id="proximoPagina" style="display: none;" onclick="location='38.html'">Próxima Página</button>
+</div>
+
+<script>
+    function obterValoresDaURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const nome = urlParams.get('nome');
+        const sobrenome = urlParams.get('sobrenome');
+        if (nome && sobrenome) {
+            const valores = `E aí, ${nome} ${sobrenome}!`;
+            document.getElementById('valores').textContent = valores;
+        }
+    }
+    obterValoresDaURL();
+
+    function verificarRespostas() {
+            const respostasCorretas = {
+                "1resposta": "Laranja",
+                "2resposta": "Morcego",
+                "3resposta": "31 de Outubro",
+                "4resposta": "trick-or-treating (doces ou travessuras)"
+            };
+
+            let todasCorretas = true;
+
+            for (let i = 1; i <= 4; i++) {
+                const inputElement = document.getElementById(`${i}resposta`);
+                const yesImage = document.getElementById(`resposta${i}-yes`);
+                const noImage = document.getElementById(`resposta${i}-no`);
+
+                if (inputElement.value === respostasCorretas[`${i}resposta`]) {
+                    // Resposta correta, mostrar imagem "yes"
+                    yesImage.style.display = "block";
+                    noImage.style.display = "none";
+                } else {
+                    // Resposta incorreta, mostrar imagem "no" e definir todasCorretas como false
+                    yesImage.style.display = "none";
+                    noImage.style.display = "block";
+                    todasCorretas = false;
+                }
+            }
+
+            if (todasCorretas) {
+                // Se todas as respostas estiverem corretas, mostrar o botão extra
+                document.getElementById('proximoPagina').style.display = "block";
+            }
+        }
+    </script>
+
+    
+<script>
+    // Inicializa o contador se ele não existir no localStorage
+    if (!localStorage.getItem("contador37")) {
+        localStorage.setItem("contador37", "0");
+    }
+    // Adicione um evento de clique ao body1
+    const body37 = document.getElementById("body37");
+    body37.addEventListener('click', function() {
+        let contador37 = parseInt(localStorage.getItem("contador37"));
+        contador37 += 1;
+        localStorage.setItem("contador37", contador37.toString());
+    });
+</script>
+</body>
+</html>

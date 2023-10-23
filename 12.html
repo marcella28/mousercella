@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body12">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.numbers1{
+    position: relative;
+    display: grid;
+    grid-template-columns: 13px 13px 13px 13px;
+    grid-template-rows: 13px 13px 13px 13px;
+    gap: 5px;
+    padding: 20px;
+}
+
+.gr{
+    color: rgb(11, 117, 43);
+    font-size: small;
+    cursor: pointer;
+    padding: 3px;
+}
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+
+    <p> Boaa! Agora, clique no número 1, mas <strong>cuidado</strong>, os número estão ficando menores ein..</p>
+    <br>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-around;">
+    <div class="numbers1">
+    <span class="gr" onclick="location = '7.html'">7</span>
+    <span class="gr" onclick="location = '7.html'">7</span>
+    <span class="gr" onclick="location = '7.html'">7</span>
+    <span class="gr" onclick="location = '7.html'" >7</span>
+    <span class="gr" onclick="location = '7.html'">7</span>
+    <span class="gr" onclick="location = '7.html'">7</span>
+    <span class="gr" onclick="location = '13.html'" >1</span>
+    <span class="gr" onclick="location = '7.html'">7</span>
+    <span class="gr" onclick="location = '7.html'">7</span>
+    <span class="gr" onclick="location = '7.html'">7</span>
+    <span class="gr" onclick="location = '7.html'">7</span>
+    <span class="gr" onclick="location = '7.html'">7</span>
+    
+    </div>
+   
+    <div>
+        <img style="border-radius: 10px;" src="images/animado.gif" >
+    </div>
+    </div>
+
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador12")) {
+            localStorage.setItem("contador12", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body12 = document.getElementById("body12");
+        body12.addEventListener('click', function() {
+            let contador12 = parseInt(localStorage.getItem("contador12"));
+            contador12 += 1;
+            localStorage.setItem("contador12", contador12.toString());
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body35">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+.roll2{
+    padding: 10px;
+    height:200px;
+    width:600px;
+    border:10px solid #a202ff;
+    border-style: double;
+    background-color: #66ee23;
+    overflow:auto; 
+    white-space: nowrap;
+    display: inline-block;
+   text-align: start;
+   gap:100px ;
+   font-size: larger;
+}
+
+ #btmusic{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+    </style>
+
+<script>
+    function exbtm(){
+    document.getElementById("btmusic").style.display = "block";
+}
+</script>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>Selecione sua música preferida de <strong><em>Halloween</em></strong>!!!</p>
+
+    <br>
+    <select size="6" class="roll2">
+        <option onclick="exbtm()"><strong>"Thriller"</strong> - Michael Jackson</option><hr><br><br>
+        <option onclick="exbtm()"><strong>"Ghostbusters"</strong> - Ray Parker Jr.</option><br><br>
+        <option onclick="exbtm()"><strong> "Somebody's Watching Me"</strong> - Rockwell</option><br><br>
+        <option onclick="exbtm()"><strong>"Sympathy for the Devil"</strong> - The Rolling Stones</option><br><br>
+        <option onclick="exbtm()"><strong> "I Put a Spell on You" - Screamin' Jay Hawkins</strong></option><br><br>
+        <option onclick="exbtm()"><strong> "Highway to Hell"</strong> - AC/DC</option><br><br>
+        <option onclick="exbtm()"> <strong>"This Is Halloween"</strong> - Da trilha sonora de "O Estranho Mundo de Jack</option><br>
+        </select>
+        <br>
+        <br>
+    <button onclick="location='36.html'" id="btmusic" style="display: none;">Continuar</button>
+    <div style="display: flex; justify-content: end; padding-right: 100px; ">
+        <img   style="height: 500px;" src="images/esqdanca.gif" >
+
+    
+        <script>
+            // Inicializa o contador se ele não existir no localStorage
+            if (!localStorage.getItem("contador35")) {
+                localStorage.setItem("contador35", "0");
+            }
+            // Adicione um evento de clique ao body1
+            const body35 = document.getElementById("body35");
+            body35.addEventListener('click', function() {
+                let contador35 = parseInt(localStorage.getItem("contador35"));
+                contador35 += 1;
+                localStorage.setItem("contador35", contador35.toString());
+            });
+        </script>
+
+</body>
+</html>

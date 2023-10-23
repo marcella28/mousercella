@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body30">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mg {
+            height: 70px;
+            width: auto;
+            padding: 10px;
+            border-style: solid;
+            border-width: 5px;
+            background-color: rgb(255, 154, 0);
+            border-color: rgb(247, 95, 28);
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 35px;
+            position: relative;
+            left: 20px;
+        }
+
+        body {
+            background-color: bisque;
+        }
+
+        h3 {
+            padding: 20px;
+        }
+
+        p {
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        input {
+            height: 19px;
+            width: 19px;
+        }
+
+        #img1,
+        #img2,
+        #img3,
+        #img4,
+        #img5,
+        #img6,
+        #img7,
+        #img8,
+        #imgn1,
+        #imgn2,
+        #imgn3,
+        #imgn4,
+        #imgn5 {
+            display: none;
+            position: absolute;
+            height: 600px;
+            width: 500px;
+            border-style: outset;
+            border-width: 5px;
+            border-color: #ff5202;
+        }
+
+        .radionimg {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 400px;
+            margin-left: 100px;
+        }
+
+        #btperso {
+            height: 40px;
+            width: 120px;
+            border-radius: 5px;
+            border-style: double;
+            border-width: 5px;
+            border-color: chartreuse;
+            background-color: #a202ff;
+            color: azure;
+            display: none;
+        }
+    </style>
+   <script>
+    var selectedOption = null; // Para rastrear a opção selecionada atualmente
+
+    var selectedOptions = [];
+
+        function persocheck2(perso) {
+            if (!selectedOptions.includes(perso)) {
+                selectedOptions.push(perso);
+            }
+            if (selectedOptions.length === 8) {
+                document.getElementById("btperso").style.display = "block";
+            }
+        }
+
+    function persocheck(perso) {
+        if (selectedOption !== null) {
+            document.getElementById(selectedOption).style.display = "none"; // Oculta a imagem anterior
+        }
+        selectedOption = perso;
+        document.getElementById(perso).style.display = "block";
+    }
+
+    function ch1() {
+
+        persocheck("img1");
+        persocheck2("perso1");
+    }
+
+    function ch2() {
+        persocheck("img2");
+        persocheck2("perso2");
+    }
+
+    function ch3() {
+        persocheck("img3");
+        persocheck2("perso3");
+    }
+
+    function ch4() {
+        persocheck("img4");
+        persocheck2("perso4");
+    }
+
+    function ch5() {
+        persocheck("img5");
+        persocheck2("perso5");
+    }
+
+    function ch6() {
+        persocheck("img6");
+        persocheck2("perso6");
+    }
+
+    function ch7() {
+        persocheck("img7");
+        persocheck2("perso7");
+    }
+
+    function ch8() {
+        persocheck("img8");
+        persocheck2("perso8");
+    }
+    </script>
+</head>
+<body>
+    <div class="mg">
+        <h1>Mouse Game - Halloween edition</h1>
+    </div>
+    <br>
+    <p>Os botões de opção permitem escolher apenas uma opção de um grupo de opções. Clique em cada um dos botões de opção abaixo para continuar, e aproveite para conhecer novos personagens de Halloween! (Observe que apenas um será selecionado por vez.)</p>
+    <br>
+    <br>
+
+    <div class="radionimg">
+        <div class="radiobut">
+            <input type="radio" name="perso" onclick="ch1()" id="perso1"><strong>Beetlejuice - "Os Fantasmas se Divertem"</strong><br><br>
+            <input type="radio" name="perso" onclick="ch2()" id="perso2"><strong>Freddy Krueger - "A Hora do Pesadelo"</strong><br><br>
+            <input type="radio" name="perso" onclick="ch3()" id="perso3"><strong>Jack Skellington - "O Estranho Mundo de Jack"</strong><br><br>
+            <input type="radio" name="perso" onclick="ch4()" id="perso4"><strong>Billy - "Jogos Mortais"</strong><br><br>
+            <input type="radio" name="perso" onclick="ch5()" id="perso5"><strong>Emily - "A Noiva Cadáver"</strong><br><br>
+            <input type="radio" name="perso" onclick="ch6()" id="perso6"><strong>Ichabod Crane - "A Lenda do Cavaleiro Sem Cabeça"</strong><br><br>
+            <input type="radio" name="perso" onclick="ch7()" id="perso7"><strong>Edward Scissorhands - "Edward Mãos de Tesoura"</strong><br><br>
+            <input type="radio" name="perso" onclick="ch8()" id="perso8"><strong>Leatherface - "O Massacre da Serra Elétrica"</strong><br><br>
+        </div>
+        <div class="imgpersonagens">
+            <picture><img src="images/beetlejuicec.jpg" id="img1"></picture>
+            <picture><img src="images/freddyk.jpg" id="img2"></picture>
+            <picture><img src="images/jackskell.jpg" id="img3"></picture>
+            <picture><img src="images/jigsaw.jpg" id="img4"></picture>
+            <picture><img src="images/emily.jpg" id="img5"></picture>
+            <picture><img src="images/ichabod.jpg" id="img6"></picture>
+            <picture><img src="images/edwardsh.jpg" id="img7"></picture>
+            <picture><img src="images/serra.jpg" id="img8"></picture>
+        </div>
+    </div>
+    <button id="btperso" onclick="location='31.html'">Próximo</button>
+
+
+    
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador30")) {
+            localStorage.setItem("contador30", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body30 = document.getElementById("body30");
+        body30.addEventListener('click', function() {
+            let contador30 = parseInt(localStorage.getItem("contador30"));
+            contador30 += 1;
+            localStorage.setItem("contador30", contador30.toString());
+        });
+    </script>
+
+</body>
+</html>

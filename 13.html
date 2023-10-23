@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body13">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13</title>
+    <style>
+      *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+} 
+.numbers0{
+    position: relative;
+    display: grid;
+    grid-template-columns: 12px 12px 12px;
+    grid-template-rows:  15px 15px 15px ;
+    gap: 7px;
+}
+
+.r{
+    color: rgb(163, 4, 4);
+    font-size: 10px; 
+    cursor: pointer;
+    padding: 3px;
+}
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+
+    <p> Uhuul! Agora o <strong>super desafio</strong>, dessa vez os números estão <strong><em>beeeeeem</em></strong> pequeninos. Tente clicar no número 0 (lembre da dica da ponta do dedo da "MÃOZINHA")</p>
+    <br>
+
+    <div style="display: flex; flex-direction: row-reverse; justify-content: space-around;">
+    <div class="numbers0">
+    <span class="r" onclick="location = '8.html'">8</span>
+    <span class="r" onclick="location = '8.html'" >8</span>
+    <span class="r" onclick="location = '8.html'">8</span>
+    <span class="r" onclick="location = '8.html'">8</span>
+    <span class="r" onclick="location = '14.html'">0</span>
+    <span class="r" onclick="location = '8.html'">8</span>
+    <span class="r" onclick="location = '8.html'">8</span>
+    <span class="r" onclick="location = '8.html'">8</span>
+    <span class="r" onclick="location = '8.html'">8</span>
+    </div>
+    <div>
+        <img style="border-radius: 20px;" src="images/meme.jpg" >
+    </div>
+</div>
+
+
+<script>
+    // Inicializa o contador se ele não existir no localStorage
+    if (!localStorage.getItem("contador13")) {
+        localStorage.setItem("contador13", "0");
+    }
+    // Adicione um evento de clique ao body1
+    const body13 = document.getElementById("body13");
+    body13.addEventListener('click', function() {
+        let contador13 = parseInt(localStorage.getItem("contador13"));
+        contador13 += 1;
+        localStorage.setItem("contador13", contador13.toString());
+    });
+</script>
+</body>
+</html>

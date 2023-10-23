@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body18">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18</title>
+    <style>
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+.gifs{
+    height: 300px;
+    width: 200px;
+    padding: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.gif{
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>Imagens animadas (GIFs) também podem ser clicáveis. Encontre o gif abaixo que irá te levar para a próxi a tela.  <strong style="font-size: xx-large; color: rgb(7, 223, 7);">Dica</strong>: arraste o mouse em cima de cada imagem</p>
+
+    <div class="gifs">
+        <picture> <img  class="gif" src="images/gif1.gif"></picture>
+        <picture> <img class="gif" src="images/gif2.gif"></picture>
+        <picture> <img class="gif" src="images/gif3.gif"></picture>
+        <picture> <img class="gif" src="images/gif4.gif" class="cat" onmouseenter="location = '19.html'"></picture>
+    </div>
+ 
+    
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador18")) {
+            localStorage.setItem("contador18", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body18 = document.getElementById("body18");
+        body18.addEventListener('click', function() {
+            let contador18 = parseInt(localStorage.getItem("contador18"));
+            contador18 += 1;
+            localStorage.setItem("contador18", contador18.toString());
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body24">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.clique{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.text{
+    border-style: double;
+    border-width: 8px;
+    border-color: black;
+    background-color:antiquewhite;
+    display: flex;
+    position: relative;
+    left: 30%;
+    flex-direction: column;
+    width: 800px;
+}
+
+#textoh{
+    padding: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>Pintinho assustador né? Agora use novamente a <strong>barra de rolagem</strong> para chegar ao final desta página. Aproveite para conheçer um pouco da história do <em>halloween!</em></p>
+    <br>
+    <div class="text">
+        <h2 style="padding: 10px; justify-content: center;">História do Halloween</h2>
+        <div id="textoh"></div>
+        <p>O <em>Halloween</em>, chamado de Dia das Bruxas no Brasil, é uma festa com temas sombrios e comemorada anualmente em <strong>31 de Outubro</strong>. 
+        <p>A palavra <em>Halloween</em> é uma abreviação da expressão All Hallows' Eve pela junção das palavras <em>hallow</em>, que significa "santo", e <em>eve</em>, que significa "véspera", pois ocorre no dia anterior à celebração do Dia de Todos os Santos.</p>      
+        <h3><em>Origem do Halloween</em></h3>
+    <p>A origem da festa do Halloween possui uma grande trajetória, visto ser praticada há mais de 3 mil anos. Ela surgiu com os celtas, povo que era politeísta e acreditava em diversos deuses relacionados com os animais e as forças da natureza.</p>
+    <p>Os celtas celebravam o festival de Samhain, o qual tinha a duração de 3 dias, com início no dia 31 de outubro. Nela, além de se comemorar o fim do verão, comemorava-se a passagem do ano celta, que tinha início no dia 1 de novembro.</p>
+    <p>Acreditava-se que nesse dia os mortos se levantavam e se apoderavam dos corpos dos vivos. Por esse motivo, eram usadas fantasias e a festa era repleta de artefatos sombrios com o intuito principal de se defenderem desses maus espíritos.</p>
+    <p>Mais tarde, durante a Idade Média, a Igreja começou a condenar o evento, e daí surgiu o nome “Dia das Bruxas”.</p>
+    <p>Durante o Medievo, os curandeiros eram considerados bruxos e por se posicionarem contra os dogmas da Igreja, eles eram queimados na fogueira.</p>  
+    <p>Assim, na tentativa de afastar o caráter pagão da festa, a Igreja promoveu alterações no calendário, de modo que o Dia de Todos os Santos passou a ser comemorado no dia 1 de novembro, o que antes acontecia no dia 13 de maio. </p>       
+    <p>Com a colonização das terras americanas, a tradição foi incluída na cultura da América, sobretudo nos Estados Unidos.</p>
+    <p>Curioso notar que a tradição do Halloween foi passada de geração em geração, uma vez que não existe nada escrito sobre isso.</p>
+    <h3><em>História do Halloween nos Estados Unidos</em></h3>
+        <p>Nos Estados Unidos, a tradição do Halloween é muito forte. Foi trazida por imigrantes irlandeses no século XIX. Desde então, a festa é o maior sucesso.</p>
+        <p>As crianças usam fantasias e batem nas portas das casas dizendo a tradicional frase: “doce ou travessura?” (trick or treat, em inglês). A brincadeira consiste em pedir doces, ameaçando cometer uma travessura a quem negar as guloseimas.</p>
+        <p><strong>Fonte:</strong><a href="https://www.todamateria.com.br/historia-do-halloween/"> todamateria.com.br</a></p>
+</div>
+    </div>
+    <br>
+  <div class="clique"> <p>Clique <a  href="25.html">aqui</a> para continuar para a próxima página.</p>
+    <img  src="images/mao.png" ></div>
+
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador24")) {
+            localStorage.setItem("contador24", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body24 = document.getElementById("body24");
+        body24.addEventListener('click', function() {
+            let contador24 = parseInt(localStorage.getItem("contador24"));
+            contador24 += 1;
+            localStorage.setItem("contador24", contador24.toString());
+        });
+    </script>
+</body>
+</html>

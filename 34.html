@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body34">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+#btitens{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+
+.roll1{
+    height:190px;
+    width:270px;
+    border:10px solid #a202ff;
+    border-style: double;
+    background-color: #66ee23;
+    overflow:auto; 
+    white-space: nowrap;
+    display: inline-block;
+   text-align: start;
+   padding: 10px;
+   font-size: larger;
+}
+    </style>
+
+    <script>
+    function exbt(){
+    if (document.getElementById("roll1").value == "esp")
+            document.getElementById("btitens").style.display = "block";
+        else document.getElementById("btitens").style.display = "none";
+
+}
+
+    function escbt(){
+        if (document.getElementById("roll1").value == "1")
+            document.getElementById("btitens").style.display = "none";
+    }
+    </script>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>A caixa branca abaixo é uma caixa de lista de rolagem. Use a barra de rolagem no lado direito da caixa de listagem para percorrer todas as opções disponíveis. Clique em uma opção para selecioná-la.</p>
+    <p>Escolha o elemento de decoração/festa de Halloween <em>"Espantalhos"</em>, e clique no botão <strong>Continuar</strong></p>
+    <br>
+    <select size="2" class="roll1" id="roll1"><br>
+        <option onclick="escbt()" value="1">Lanternas de abóbora</option><br><br>
+        <option onclick="escbt()" value="1"> Teias de aranha falsas</option><br><br>
+        <option onclick="escbt()" value="1"> Morcegos de papelão</option><br><br>
+        <option onclick="escbt()" value="1">Velas sangrentas</option><br><br>
+        <option onclick="exbt()" value="esp"> Espantalhos</option><br><br>
+        <option onclick="escbt()" value="1"> Máscaras de monstros</option><br><br>
+        <option onclick="escbt()" value="1"> Fantasmas de pano</option><br>
+        <option onclick="escbt()" value="1"> Caldeirão de bruxa</option><br>
+        <option onclick="escbt()" value="1"> Cadáver falso</option><br>
+        <option onclick="escbt()" value="1"> Múmia de papel higiênico</option><br>
+        </select>
+        <br>
+        <br>
+    <button onclick="location='35.html'" id="btitens" style="display: none;">Continuar</button>
+
+    
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador34")) {
+            localStorage.setItem("contador34", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body34 = document.getElementById("body34");
+        body34.addEventListener('click', function() {
+            let contador34 = parseInt(localStorage.getItem("contador34"));
+            contador34 += 1;
+            localStorage.setItem("contador34", contador34.toString());
+        });
+    </script>
+
+</body>
+</html>

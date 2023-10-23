@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body7">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#sete{
+   color: rgb(23, 64, 199);
+   cursor: pointer; 
+   font-size: xx-large;
+   padding: 10px;
+}
+
+.num7{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:  baseline;
+}
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+
+    <p>Clique no número 7 abaixo:</p>
+
+    <div class=" num7">
+    <span id="sete" onclick="location = '8.html'">7</span>
+    <div>
+    <img  src="images/frank-unscreen.gif" >
+    </div>
+    </div>
+    
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador7")) {
+            localStorage.setItem("contador7", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body7 = document.getElementById("body7");
+        body7.addEventListener('click', function() {
+            let contador7 = parseInt(localStorage.getItem("contador7"));
+            contador7 += 1;
+            localStorage.setItem("contador7", contador7.toString());
+        });
+    </script>
+</body>
+</html>

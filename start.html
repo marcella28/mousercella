@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousegame</title>
+    <style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .mg{
+        height: 70px;
+        width: 98%;
+        padding: 10px;
+        border-style: solid;
+        border-width: 5px;
+        background-color: rgb(255, 154, 0);
+        border-color: rgb(247, 95, 28);  
+    }
+    
+    h1{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 35px;
+        position: relative;
+        left: 20px;
+    }
+    body{
+        background-color:bisque;
+    }
+    
+    h3{
+        padding: 20px;
+    }
+    
+    #pratica{
+        height: 50px;
+        width: 200px;
+        border-style: groove;
+        border-width: 4px;
+        background-color:rgb(118, 250, 113) ;
+        font-size: larger;
+        position: relative;
+        left: 45%;
+        border-color: #a202ff;
+        cursor: pointer;
+    }
+
+    h2{
+        display: flex;
+        justify-content: center;
+        color: #a202ff;
+    }
+
+    .initial_gifs{
+        display: flex;
+        justify-content: center;
+    }
+
+    .cliquebt{
+        display: flex;
+        margin-left: 14px;
+    }
+
+    p{
+    padding: 10px;
+    font-size: 20px;
+}
+    </style>
+
+
+</head>
+<body id="start">
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <br>
+    <h2>Bem vindo ao jogo do mouse! Aqui você aprenderá como utilizar essa ferramenta, e, ao mesmo tempo, se diverte com a temática de <em><strong>Halloween</strong></em>! </h2>
+    <br>
+   <div class="initial_gifs">
+        <img  src="images/palha-o-unscreen.gif" >
+        <img  src="images/esq abobora.gif">
+        <img  src="images/vampcool-unscreen.gif">
+    </div>
+    <h3>Este exercício irá ajudá-lo a praticar suas habilidades com o mouse do computador e ensiná-lo a usar os controles básicos da interface do usuário. Estão faça sua escolha: <em><strong>doces ou travessuras?</strong></em></h3>
+    <p class="cliquebt">Clique no botão abaixo para começar:</p>
+    <div><button id="pratica" onclick="location = '1.html'"><strong>Iniciar</strong></button></div>
+    
+</body>
+</html>

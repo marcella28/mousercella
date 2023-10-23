@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body36">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+ #btenv{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    border-style: groove;
+    border-width: 4px;
+    border-color: greenyellow;
+    width: 400px;
+    height: 400px;
+    flex-direction: column;
+}
+    </style>
+    
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+
+<p>As finas caixas brancas abaixo são caixas de texto. Clique na primeira caixa com o mouse e digite o nome de algum <strong style="color: blueviolet;">personagem de halloween</strong> visto no game. Em seguida, clique dentro da segunda caixa e digite o sobrenome do personagem. Quando terminar, clique no botão 'Enviar'.</p>
+</div>
+<div style="display: flex; justify-content: center;">
+<div class="inputs">
+<label for="name"><strong> Primeiro nome:</strong></label>
+<input  type="text" style="width: 300px;" id="nome" oninput="atualizarCampoCopia()">
+<br>
+<br>
+<label for="name"><strong>Sobrenome</strong></label>
+<input  type="text" style="width: 300px;" id="sobrenome" oninput="atualizarCampoCopia()">
+<br><br>
+<button id="btenv" onclick="irParaProximaPagina()" style="display: block;">Enviar</button>
+<br>
+<img src="images/gvoa.gif" style="height: 50px; width: 50px;">
+</div>
+</div>
+<script>
+    function irParaProximaPagina() {
+        var nome = document.getElementById('nome').value;
+        var sobrenome = document.getElementById('sobrenome').value;
+        var url = '37.html?nome=' + encodeURIComponent(nome) + '&sobrenome=' + encodeURIComponent(sobrenome);
+        window.location.href = url;
+    }
+
+    
+    
+</script>
+
+<script>
+    // Inicializa o contador se ele não existir no localStorage
+    if (!localStorage.getItem("contador36")) {
+        localStorage.setItem("contador36", "0");
+    }
+    // Adicione um evento de clique ao body1
+    const body36 = document.getElementById("body36");
+    body36.addEventListener('click', function() {
+        let contador36 = parseInt(localStorage.getItem("contador36"));
+        contador36 += 1;
+        localStorage.setItem("contador36", contador36.toString());
+    });
+</script>
+</body>
+</html>

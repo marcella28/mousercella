@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body20">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20</title>
+    <style>
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.btclick{
+    height: 80px;
+    width: 80px;
+    border-radius: 200px;
+}
+
+.btopen{
+    height: 80px;
+    width: 80px;
+    border-radius: 200px;
+
+}
+
+#g1, #g2, #g3, #g4, #g5, #g6, #g7 {
+    display: none;    
+}
+
+#btcontinue2{
+
+    display: none;
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+    cursor: pointer;
+}
+
+.pics{
+    position: relative;
+    left: 40%;
+    display: grid;
+    grid-template-columns: 120px 120px 120px  120px;
+    grid-template-rows:  150px 150px 150px  150px ;
+}
+    </style>
+</head>
+<body>
+    <script>
+var totalbtd = 7
+var btckd= 0
+
+function verifyd() {
+    if(btckd===totalbtd) {
+    document.getElementById("btcontinue2").style.display = "block";  
+    }
+}
+
+
+function exibir(id) {
+    var elemento = document.getElementById(id);
+    
+    if (elemento.style.display !== "block") {
+    elemento.style.display = "block";
+    btckd ++;
+    verifyd();
+    } 
+}
+</script>
+
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p> Novamente, clique em cada uma das abóboras para avançar para a próxima página:</p>
+    <br>
+ 
+    <div class="pics">
+        <picture><img  class="btclick" src="images/abobora.jpeg" onclick="exibir('g1')"></picture>
+        <picture><img  id="g1" class="btopen" src="images/ghost.jpeg"></picture> 
+        <picture><img  class="btclick" src="images/abobora.jpeg" onclick="exibir('g2')"></picture> 
+        <picture><img  id="g2" class="btopen" src="images/ghost.jpeg"></picture>
+        <picture><img  class="btclick" src="images/abobora.jpeg" onclick="exibir('g3')"></picture> 
+        <picture><img  id="g3" class="btopen" src="images/ghost.jpeg"></picture>
+        <picture><img  class="btclick" src="images/abobora.jpeg" onclick="exibir('g4')"></picture>
+        <picture><img  id="g4" class="btopen" src="images/ghost.jpeg"></picture>
+        <picture><img  class="btclick" src="images/abobora.jpeg" onclick="exibir('g5')"></picture>
+        <picture><img  id="g5" class="btopen" src="images/ghost.jpeg"></picture>
+        <picture><img  class="btclick" src="images/abobora.jpeg" onclick="exibir('g6')"></picture> 
+        <picture><img  id="g6" class="btopen" src="images/ghost.jpeg"></picture>
+        <picture><img  class="btclick" src="images/abobora.jpeg" onclick="exibir('g7')"></picture> 
+        <picture><img  id="g7" class="btopen" src="images/ghost.jpeg"></picture>
+        <button id="btcontinue2" onclick="location = '21.html'">Continue</button>
+    </div>
+                
+    
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador20")) {
+            localStorage.setItem("contador20", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body20 = document.getElementById("body20");
+        body20.addEventListener('click', function() {
+            let contador20 = parseInt(localStorage.getItem("contador20"));
+            contador20 += 1;
+            localStorage.setItem("contador20", contador20.toString());
+        });
+    </script>
+    </body>
+    </html>
+

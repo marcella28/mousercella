@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body4">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <style>
+      *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+} 
+
+.num4{
+    padding: 20px;
+}
+
+#quatro{
+    color: rgb(23, 64, 199);
+    font-size: 50px; 
+    cursor: pointer;
+}
+
+
+.quatroq{
+    position:relative;
+    top: 150px;
+    display: flex;
+    flex-direction:row;
+    flex-flow: row-reverse;
+    padding: 100px; 
+    justify-content: space-between;
+}
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <div class="quatroq">
+    
+    <p>Agora, clique no número 4 à esquerda.</p>
+
+    <div class=" num4">
+    <span id="quatro" onclick="location = '5.html'">4</span>
+    </div>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: baseline;">
+        <img  src="images/tent1.gif" >
+        <img  src="images/tent1.gif" >
+        <img  src="images/tent1.gif" >
+        <img  src="images/tent1.gif" >
+        <img  src="images/tent1.gif" >
+    </div>
+
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador4")) {
+            localStorage.setItem("contador4", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body4 = document.getElementById("body4");
+        body4.addEventListener('click', function() {
+            let contador4 = parseInt(localStorage.getItem("contador3"));
+            contador4 += 1;
+            localStorage.setItem("contador4", contador4.toString());
+        });
+    </script>
+</body>
+</html>

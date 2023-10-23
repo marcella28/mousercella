@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body33">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+#btdate{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+    </style>
+
+    <script>
+        function exbtdate(){
+    if (document.getElementById("days").value == "out")
+            document.getElementById("btdate").style.display = "block";
+        else document.getElementById("btdate").style.display = "none";
+
+}
+    </script>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>Selecione a data correta do <em>Halloween</em>, e clique no botão <strong>Continuar</strong>.</p>
+    
+    <br>
+    <div>
+        <label for="days">Escolha uma data:</label>
+
+<select name="days" id="days" onclick="exbtdate()">
+  <option >31 de Janeiro</option>
+  <option >31 de Fevereiro</option>
+  <option >31 de Março</option>
+  <option >31 de Maio</option>
+  <option >31 de Junho</option>
+  <option >31 de Julho</option>
+  <option >31 de Setembro</option>
+  <option value="out">31 de Outubro</option>
+  <option >31 de Novembro</option>
+  <option >31 de Dezembro</option>
+</select>
+    </div>
+    <br>
+    
+    <button onclick="location='34.html'" id="btdate" style="display: none;">Próximo</button>
+    <div style="display: flex; justify-content: end; padding-right: 100px; ">
+        <img   style="height: 500px;" src="images/felizh.gif" >
+
+        
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador33")) {
+            localStorage.setItem("contador33", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body33 = document.getElementById("body33");
+        body33.addEventListener('click', function() {
+            let contador33 = parseInt(localStorage.getItem("contador33"));
+            contador33 += 1;
+            localStorage.setItem("contador33", contador33.toString());
+        });
+    </script>
+
+</body>
+</html>

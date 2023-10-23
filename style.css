@@ -1,0 +1,689 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+#pratica{
+    height: 50px;
+    width: 200px;
+    border-style: groove;
+    border-width: 4px;
+    background-color:rgb(118, 250, 113) ;
+    font-size: larger;
+    position: relative;
+    left: 45%;
+    border-color: #a202ff;
+}
+
+#bt{
+    height: 50px;
+    width: 100px;
+    border-style: groove;
+    border-width: 4px;
+    background-color:rgb(118, 250, 113) ;
+    font-size: larger;
+    position: relative;
+    left: 45%;
+
+}
+
+
+#um{
+    color: blueviolet;
+    font-size: 100px; 
+    position: relative;
+    left: 100px;
+    cursor: pointer;
+}
+#dois{
+    color: blueviolet;
+    font-size: 70px; 
+    display: flex;
+    flex-flow:row-reverse;
+    padding: 40px;
+    cursor: pointer;
+}
+
+#tres , .numtres{
+    display: flex;
+    flex-flow:row-reverse;
+    padding: 70px;
+    cursor: pointer;
+}
+
+#tres{
+    color: rgb(23, 64, 199);
+    font-size: 50px; 
+    cursor: pointer;
+    display: flex;
+    flex-flow:row-reverse;
+    padding: 70px;
+}
+
+#quatro{
+    color: rgb(23, 64, 199);
+    font-size: 50px; 
+    cursor: pointer;
+}
+
+
+.quatroq{
+    position:relative;
+    top: 150px;
+    display: flex;
+    flex-direction:row;
+    flex-flow: row-reverse;
+    padding: 100px; 
+    justify-content: space-between;
+}
+
+#cinco{
+    font-size: medium;
+    color: rgb(233, 92, 57);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 90px;
+    position: relative;
+    top: 300px;
+    cursor: pointer;
+}
+
+.pink{
+    color: rgb(23, 64, 199);
+}
+
+.numbers6{
+    position: relative;
+    left: 45%;
+    display: grid;
+    grid-template-columns: 20px 20px 20px;
+    grid-template-rows: 20px 20px 20px;
+    color: rgb(233, 126, 3);
+    gap: 15px;
+}
+
+.numbers5{
+    position: relative;
+    left: 45%;
+    display: grid;
+    grid-template-columns: 20px 20px 20px;
+    grid-template-rows: 20px 20px 20px;
+    color: rgb(233, 126, 3);
+    gap: 5px;
+}
+
+.org{
+    color: rgb(233, 126, 3); 
+}
+
+#sete, .sete1{
+   color: rgb(23, 64, 199);
+   cursor: pointer; 
+}
+
+.p6{
+    position: relative;
+    left: 20%;
+}
+
+.numbers8{
+    position: relative;
+    display: grid;
+    grid-template-columns: 12px 12px 12px 12px;
+    grid-template-rows:  15px 15px 15px ;
+    color: rgb(199, 23, 67);
+    
+}
+
+.red, #oito{
+    color: rgb(236, 42, 42);
+}
+
+#oito{
+    cursor: pointer;
+}
+
+.oito, .num8{
+    position: relative;
+    left: 35%;
+    cursor: pointer;
+}
+
+#bt1{
+    border-radius: 20px;
+    height: 50px;
+    width: 200px;
+    border-style:dotted;
+    border-width: 5px;
+    background-color:rgb(184, 22, 248) ;
+    font-size: larger;
+    position: relative;
+    border-color: rgb(5, 255, 17);
+    left: 45%;
+    cursor: pointer;
+
+}
+
+#bt2{
+    height: 50px;
+    width: 100px;
+    border-style: groove;
+    border-width: 2px;
+    background-color:rgb(5, 0, 0) ;
+    font-size: 20px;
+    position: relative;
+    left: 45%; 
+    color: aliceblue;
+    cursor: pointer;
+}
+
+#bt3{
+    height: 50px;
+    width: 70px;
+    border-style: groove;
+    border-width: 5px;
+    border-color: rgb(116, 226, 43);
+    background-color:rgb(248, 170, 2) ;
+    font-size: 20px;
+    position: relative;
+    left: 45%;  
+    cursor: pointer;
+}
+#pratica{
+    height: 50px;
+    width: 200px;
+    border-style: groove;
+    border-width: 4px;
+    background-color:rgb(118, 250, 113) ;
+    font-size: larger;
+    position: relative;
+    left: 45%;
+    border-color: #a202ff;
+}
+
+
+
+
+.cat{
+    cursor: pointer;
+}
+
+
+.imagens{
+    height: 300px;
+    width: 900px;
+    padding: 30px;
+    position: relative;
+    left: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap ;
+    gap: 80px;
+}
+
+.img{
+    height: 200px;
+    border-radius: 20px;
+}
+
+.gifs{
+    height: 300px;
+    width: 300px;
+    padding: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.gif{
+    height: 300px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+.p6{
+    padding-top: 90px;
+}
+
+#seis{
+    color: rgb(202, 182, 3);
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.num7, #sete{
+    color: rgb(10, 119, 119);
+    font-size: 90px; 
+    position: relative;
+    top: 200px;
+    left: 1000px;
+    cursor: pointer;
+    width: 100px;
+}
+
+#sete{
+    padding: 30px;
+    padding-right: 10px;
+
+}
+
+.sete1{
+    color: orangered;
+}
+
+.gr{
+    color: rgb(11, 117, 43);
+    font-size: small;
+}
+
+.r{
+    color: rgb(163, 4, 4);
+    font-size: 10px; 
+}
+
+.numbers1, .numbers0{
+    position: relative;
+    left: 45%;
+    display: grid;
+    grid-template-columns: 12px 12px 12px;
+    grid-template-rows:  15px 15px 15px ;
+}
+
+.btclick{
+    height: 80px;
+    width: 80px;
+    border-radius: 200px;
+}
+
+.btopen{
+    height: 80px;
+    width: 80px;
+    border-radius: 200px;
+
+}
+
+table{
+    padding: 20px;
+}
+
+#tree1, #tree2, #tree3, #tree4, #tree5, #tree6, #tree7, #tree8,  #btcontinue, #g1, #g2, #g3, #g4, #g5, #g6, #g7 {
+    display: none;    
+}
+
+.btclick, #btcontinue{
+    cursor: pointer;
+}
+
+.pics{
+    position: relative;
+    left: 40%;
+    display: grid;
+    grid-template-columns: 120px 120px 120px  120px;
+    grid-template-rows:  150px 150px 150px  150px ;
+}
+
+#btcontinue2, #btcontinue3{
+    height: 40px;
+    width: 90px;
+    display: none;
+}
+
+#boo1, #boo2, #boo3, #boo4, #boo5, #boo6{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.boo{
+    position: relative;
+    left: 40%;
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+    grid-template-rows:  150px 150px 150px;
+    padding: 30px;
+}
+
+
+.bruxas{
+    display: flex;
+    height: 1802px;
+    position: relative;
+    left: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.clique{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.text{
+    border-style: double;
+    border-width: 8px;
+    border-color: black;
+    background-color:antiquewhite;
+    display: flex;
+    position: relative;
+    left: 30%;
+    flex-direction: column;
+    width: 800px;
+}
+
+#textoh{
+    padding: 10px;
+}
+
+.longimg{
+    height: 403px;
+    width: 2800px;
+}
+
+.longlink{
+    display: flex;
+    flex-direction:row;
+    height: 203px ;
+    height: 403px;
+    width: 3000px;
+}
+
+.doce{
+    height: 40px;
+    width: 50px;
+}
+.doces{
+    position: relative;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.doces2{
+    position: relative;
+    left: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px; 
+}
+
+ .doces3{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+
+}
+
+.vamp{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 800px;
+}
+
+#vampcasa{
+    position: relative;
+    height: 500px;
+}
+
+input{
+    height: 19px;
+    width: 19px;
+}
+#btcont{
+    display: none;
+}
+
+.gifs2{
+    width: 1000px;
+}
+
+.cestaa{
+    height: 850px;
+    width: 880px;
+    position: absolute;
+}
+
+.c{
+    height: 80px;
+    width: 80px;
+}
+
+.cesta1{
+    position: absolute;
+    top: 345px;
+    left: 580px;
+    display: none;
+}
+
+.cesta2{
+    position: absolute;
+    top: 350px;
+    left: 850px;
+    display: none;
+}
+
+.cesta3{
+    position: absolute;
+    top: 350px;
+    left: 700px;
+    display: none;
+}
+
+.cesta4{
+    position: absolute;
+    top: 330px;
+    left: 780px;
+    display: none;
+}
+
+.cesta5{
+    position: absolute;
+    top: 340px;
+    left: 640px;
+    display: none;
+}
+
+.cesta6{
+    position: absolute;
+    top: 390px;
+    left: 760px;
+    display: none;
+}
+
+.btcesta{
+    height: 30px;
+    width: 120px;
+    display: none
+}
+
+.radionimg, .hfilmes{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        gap: 500px;
+        margin-left: 100px;
+}
+
+
+
+#img1,#img2, #img3, #img4, #img5, #img6, #img7, #img8,#imgn1, #imgn2, #imgn3, #imgn4, #imgn5{
+    display: none;
+    position: absolute;
+    height: 600px;
+    width: 500px;
+    border-style: outset;
+    border-width: 5px;
+    border-color: #c402ff;
+}
+
+.hfilmes{
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.roll1{
+    height:90px;
+    width:260px;
+    border:10px solid #a202ff;
+    border-style: double;
+    background-color: #66ee23;
+    overflow:auto; 
+    white-space: nowrap;
+    display: inline-block;
+   text-align: start;
+   padding: 10px;
+   font-size: larger;
+}
+
+.roll2{
+    padding: 10px;
+    height:100px;
+    width:600px;
+    border:10px solid #a202ff;
+    border-style: double;
+    background-color: #66ee23;
+    overflow:auto; 
+    white-space: nowrap;
+    display: inline-block;
+   text-align: start;
+   gap:100px ;
+   font-size: larger;
+}
+
+#btperso, #btmovie, #btday, #btitens, #btcesta, #btmusic, .mostrar, #btdate, #btenv, #btcontinue, #btcontinue2, #btcontinue3, #final, #btcont{
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+
+
+
+
+
+
+
+
+.text {
+
+    text-align: center;
+
+}
+
+
+
+
+
+
+
+.container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+   
+
+}
+
+
+
+.respostas, .perguntas {
+
+    width: 45%;
+
+}
+
+
+
+.respostas h3, .perguntas h3 {
+
+    text-align: center;
+
+    color: rgb(248, 114, 36);
+
+}
+
+
+
+.respostas p, .perguntas p {
+
+    margin: 0;
+
+}
+
+
+
+.bd{
+
+    display: none;
+
+    width: 30px;
+
+    height: 30px;
+
+}
+
+
+
+#botao{
+
+    display: none;
+
+    position: relative;
+
+    left: 20%;
+
+    border-color: rgb(95, 226, 43);
+
+    top: 70%;
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body23">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+.bruxas{
+    display: flex;
+    height: 1802px;
+    position: relative;
+    left: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.clique{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>Bom trabalho! Use a <strong>barra de rolagem</strong> para chegar ao final desta página. Só tome cuidado para não ser <em>assustar</em> ein?</p>
+    <br>
+    <picture><img class="bruxas" src="images/boo.abobora.jpeg"></picture>
+    <br>
+  <div class="clique"> <p>Clique <a  href="24.html">aqui</a> para continuar para a próxima página.</p></div>
+
+  <script>
+    // Inicializa o contador se ele não existir no localStorage
+    if (!localStorage.getItem("contador23")) {
+        localStorage.setItem("contador23", "0");
+    }
+    // Adicione um evento de clique ao body1
+    const body23 = document.getElementById("body23");
+    body23.addEventListener('click', function() {
+        let contador23 = parseInt(localStorage.getItem("contador23"));
+        contador23 += 1;
+        localStorage.setItem("contador23", contador23.toString());
+    });
+</script>
+   
+</body>
+</html>

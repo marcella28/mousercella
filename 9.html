@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body9">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.numbers6{
+    position: relative;
+    left: 45%;
+    display: grid;
+    grid-template-columns: 20px 20px 20px;
+    grid-template-rows: 20px 20px 20px;
+    color: rgb(233, 126, 3);
+    gap: 15px;
+}
+
+#sete{
+   color: rgb(213, 2, 255);
+   cursor: pointer; 
+}
+
+.pink{
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+
+    <p class="p6">Clique no número 6 abaixo para continuar. Tenha cuidado para não clicar nos 3 ao redor, ou você será enviado de volta à página 3!</p>
+    <p class="p6">(Dica: quando o cursor do mouse mudar para o formato de uma mão, coloque a ponta do dedo no <strong>meio</strong> do <strong>número</strong> no qual deseja clicar)</p>
+    <div class="numbers6">
+    <p class="pink" onclick="location = '3.html'">3</p>
+    <p class="pink" onclick="location = '3.html'" >3</p>
+    <p class="pink" onclick="location = '3.html'">3</p>
+    <p class="pink" onclick="location = '3.html'">3</p>
+    <p id="sete" " onclick="location = '10.html'">6</p>
+    <p class="pink" onclick="location = '3.html'">3</p>
+    <p class="pink" onclick="location = '3.html'">3</p>
+    <p class="pink" onclick="location = '3.html'">3</p>
+    <p class="pink" onclick="location = '3.html'">3</p>
+    </div>
+    </div>
+    <div style="display: flex; justify-content: end; align-items: baseline;">
+        <img  style="border-radius:10px ;" src="images/jackp.gif" >
+    </div>
+
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador9")) {
+            localStorage.setItem("contador9", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body9 = document.getElementById("body9");
+        body9.addEventListener('click', function() {
+            let contador9 = parseInt(localStorage.getItem("contador9"));
+            contador9 += 1;
+            localStorage.setItem("contador9", contador9.toString());
+        });
+    </script>
+</body>
+</html>

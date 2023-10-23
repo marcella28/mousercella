@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body26">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26</title>
+    <style>
+      *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.doce{
+    height: 40px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.doces{
+    position: relative;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.doces2{
+    position: relative;
+    left: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 100px; 
+}
+
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>Esta página tem o dobro da ação da barra de rolagem em uma só! Encontre as guloseimas do fantasminha seguindo a trilha de docinhos!</p>
+    <picture><img  style="padding: 40px;"  class="fomeg" src="images/gfome.gif"></picture>
+
+    <div class="doces">
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+    </div>
+    <div class="doces2">
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img class="doce" src="images/doce.jpeg"></picture>
+        <br>
+        <picture><img style="padding: 10px; border-radius: 20%;" src="images/doces2.jpeg"></picture>
+        <p style="padding-right: 100px; width: 2000px;"><strong>Parabéns!</strong><br> O fantasminha ficou de barriga cheia agora, se é que ele conseguiu comer <em>uahahahahaha</em>! <br>Clique<a href="27.html"> aqui </a> para ir para a próxima página.</p>
+    </div>
+
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador26")) {
+            localStorage.setItem("contador26", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body26 = document.getElementById("body26");
+        body26.addEventListener('click', function() {
+            let contador26 = parseInt(localStorage.getItem("contador26"));
+            contador26 += 1;
+            localStorage.setItem("contador26", contador26.toString());
+        });
+    </script>
+
+</body>
+</html>
+    

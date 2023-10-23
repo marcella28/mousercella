@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body29">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+input{
+    height: 19px;
+    width: 19px;
+}
+
+.cestaa{
+    height: 850px;
+    width: 880px;
+    position: absolute;
+}
+
+.c{
+    height: 80px;
+    width: 80px;
+}
+
+.cesta1{
+    position: absolute;
+    top: 345px;
+    left: 580px;
+    display: none;
+}
+
+.cesta2{
+    position: absolute;
+    top: 350px;
+    left: 850px;
+    display: none;
+}
+
+.cesta3{
+    position: absolute;
+    top: 350px;
+    left: 700px;
+    display: none;
+}
+
+.cesta4{
+    position: absolute;
+    top: 330px;
+    left: 780px;
+    display: none;
+}
+
+.cesta5{
+    position: absolute;
+    top: 340px;
+    left: 640px;
+    display: none;
+}
+
+.cesta6{
+    position: absolute;
+    top: 390px;
+    left: 760px;
+    display: none;
+}
+
+.btcesta{
+    display: none;
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+}
+
+.doces3{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+}
+    </style>
+    <script>
+        var doce= 0
+var ckdoce= 0
+function docecheck(){
+    if(ckdoce>doce) {
+        document.getElementById("btcesta").style.display = "block";  
+        }
+ }
+function doce1() {
+    var checkbox = document.getElementById("balas");
+    var imagem = document.getElementById("cesta1");
+
+    if (checkbox.checked) {
+        imagem.style.display = "block";
+        ckdoce ++;
+        docecheck(); // Mostra a imagem
+    } else {
+        imagem.style.display = "none"; // Oculta a imagem
+    }
+}
+
+function doce2() {
+    var checkbox = document.getElementById("maca");
+    var imagem = document.getElementById("cesta2");
+
+    if (checkbox.checked) {
+        imagem.style.display = "block"; // Mostra a imagem
+        ckdoce ++;
+        docecheck();
+    } else {
+        imagem.style.display = "none"; // Oculta a imagem
+    }
+}
+
+function doce3() {
+    var checkbox = document.getElementById("pirulito");
+    var imagem = document.getElementById("cesta3");
+
+    if (checkbox.checked) {
+        imagem.style.display = "block";
+        ckdoce ++;
+        docecheck(); // Mostra a imagem
+    } else {
+        imagem.style.display = "none"; // Oculta a imagem
+    }
+}
+
+function doce4() {
+    var checkbox = document.getElementById("olho");
+    var imagem = document.getElementById("cesta4");
+
+    if (checkbox.checked) {
+        imagem.style.display = "block"; 
+        ckdoce ++;
+        docecheck();// Mostra a imagem
+    } else {
+        imagem.style.display = "none"; // Oculta a imagem
+    }
+}
+
+function doce5() {
+    var checkbox = document.getElementById("bala2");
+    var imagem = document.getElementById("cesta5");
+
+    if (checkbox.checked) {
+        imagem.style.display = "block"; 
+        ckdoce ++;
+        docecheck();// Mostra a imagem
+    } else {
+        imagem.style.display = "none"; // Oculta a imagem
+    }
+}
+
+function doce6() {
+    var checkbox = document.getElementById("dente");
+    var imagem = document.getElementById("cesta6");
+
+    if (checkbox.checked) {
+        imagem.style.display = "block";
+        ckdoce ++;
+        docecheck(); // Mostra a imagem
+    } else {
+        imagem.style.display = "none"; // Oculta a imagem
+    }
+}
+    </script>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>As caixas de seleção permitem selecionar uma ou mais opções de um grupo de opções. Escolha seus doces (ou travessuras) preferidos e adicione-os na sua cesta!</p>
+    <br>
+    <br>
+    <br>
+    <div class="doces3">
+        <div>
+        <input type="checkbox" id="balas" onclick="doce1()" ><strong>Bala de espantalho</strong><br><br>
+        <input type="checkbox" id="maca" onclick="doce2()"><strong>Maçã da bruxa</strong><br><br>
+        <input type="checkbox" id="pirulito" onclick="doce3()"><strong>Pirulito de abóbora</strong><br><br>
+        <input type="checkbox" id="olho" onclick="doce4()"><strong>Olho de zumbi</strong><br><br>
+        <input type="checkbox" id="bala2" onclick="doce5()"><strong>Bala do bicho papão</strong><br><br>
+        <input type="checkbox" id="dente" onclick="doce6()"><strong>Dentadura do esqueleto</strong><br><br>
+        </div>
+        <picture>
+            <img  class="cestaa" src="images/cesta.png">
+            <img id="cesta1" class="cesta1 c" src="images/cesta1.png">
+            <img  id="cesta2" class="cesta2 c" src="images/cesta2.png">
+            <img id="cesta3" class="cesta3 c" src="images/cesta3.png">
+            <img id="cesta4" class="cesta4 c" src="images/cesta4.png">
+            <img  id="cesta5" class="cesta5 c" src="images/cesta5.png">
+            <img id="cesta6" class="cesta6 c" src="images/cesta6.png">
+        </picture>
+    </div>
+    <br>
+    <button id="btcesta" class="btcesta" onclick= "location='30.html'">Finalizar cesta</button>
+
+    
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador29")) {
+            localStorage.setItem("contador29", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body29 = document.getElementById("body29");
+        body29.addEventListener('click', function() {
+            let contador29 = parseInt(localStorage.getItem("contador29"));
+            contador29 += 1;
+            localStorage.setItem("contador29", contador29.toString());
+        });
+    </script>
+</body> 
+</html>
+  

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body25">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: 3000px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28); 
+    left: 0; 
+    top: 0;
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.longimg{
+    height: 503px;
+    width: 2800px;
+}
+
+.longlink{
+    display: flex;
+    flex-direction:row;
+    width: 300px;
+}
+    </style>
+</head>
+<body>
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+    <p>Use a barra de rolagem na parte inferior desta janela para rolar a página para o lado direito.</p>
+    <div class="longlink">
+        <picture><img class="longimg" src="images/longimg.jpeg"></picture>
+        <div><p><a href="26.html" >Próxima página</a></p></div>
+    </div>
+
+    <script>
+        // Inicializa o contador se ele não existir no localStorage
+        if (!localStorage.getItem("contador25")) {
+            localStorage.setItem("contador25", "0");
+        }
+        // Adicione um evento de clique ao body1
+        const body25 = document.getElementById("body25");
+        body25.addEventListener('click', function() {
+            let contador25 = parseInt(localStorage.getItem("contador25"));
+            contador25 += 1;
+            localStorage.setItem("contador25", contador25.toString());
+        });
+    </script>
+
+</body>
+</html>

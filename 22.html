@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="body22">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22</title>
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mg{
+    height: 70px;
+    width: auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: 5px;
+    background-color: rgb(255, 154, 0);
+    border-color: rgb(247, 95, 28);  
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    position: relative;
+    left: 20px;
+}
+body{
+    background-color:bisque;
+}
+
+h3{
+    padding: 20px;
+}
+
+p{
+    padding: 10px;
+    font-size: 20px;
+}
+
+.custom-dialog {
+      display: none;
+      background: rgb(241, 176, 123);
+      padding: 20px;
+      border: 6px groove #c206f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+button{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+    background-color: #a202ff;
+    color: azure;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <script>
+         function showCustomDialog() {
+      var caixa = document.getElementById("custom-dialog");
+      caixa.style.display = "block";
+    }
+
+    function redirectToPage(url) {
+      window.location.href = url;
+    }
+
+    </script>
+
+
+
+    <div class="mg"><h1>Mouse Game - Halloween edition</h1></div>
+    <br>
+<p>As <strong>caixas de mensagens</strong> são mensagens curtas que o computador coloca na tela para alertá-lo sobre informações importantes ou para fazer perguntas antes de realizar uma tarefa.</p>
+<p>Quando uma caixa de mensagem aparecer, você deverá ler a mensagem ou pergunta e responder <strong>clicando no botão</strong> apropriado na caixa de mensagem.</p>
+<p>Clique no <strong>link abaixo</strong> para exibir uma caixa de mensagem, leia a mensagem e clique no botão apropriado na caixa.</p>
+<a href="#" id="msg" onclick="showCustomDialog()" >Clique em mim para exibir uma caixa de mensagem</a>
+<div id="custom-dialog" class="custom-dialog">
+    <p>Deseja ir para a próxima página?</p>
+    <button onclick="redirectToPage('23.html')">Sim</button>
+    <button onclick="redirectToPage('22.html')">Não</button>
+<div style="display: flex; justify-content: end;">
+    <img  src="images/abgato-unscreen.gif" >
+</div>
+</div>
+
+<script>
+    // Inicializa o contador se ele não existir no localStorage
+    if (!localStorage.getItem("contador22")) {
+        localStorage.setItem("contador22", "0");
+    }
+    // Adicione um evento de clique ao body1
+    const body22 = document.getElementById("body22");
+    body22.addEventListener('click', function() {
+        let contador22 = parseInt(localStorage.getItem("contador22"));
+        contador22 += 1;
+        localStorage.setItem("contador22", contador22.toString());
+    });
+</script>
+</body>
+</html>
